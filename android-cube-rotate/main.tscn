@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bmykgbcq1mkva"]
+
+[ext_resource type="Script" uid="uid://d4dya508sjew1" path="res://Scripts/CubeController.cs" id="1_ig7tw"]
+[ext_resource type="Material" path="res://Assets/Material/Rock029_1K-JPG/Rock029_1K-JPG.tres" id="2_0xm2m"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
+
+[sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 2
+sky = SubResource("Sky_ig7tw")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
+material = ExtResource("2_0xm2m")
+
+[node name="Main" type="Node3D" unique_id=1514120993]
+script = ExtResource("1_ig7tw")
+CubePath = NodePath("Cube")
+CameraPath = NodePath("MainCamera")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=264615491]
+environment = SubResource("Environment_0xm2m")
+
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=973120890]
+mesh = SubResource("BoxMesh_h2yge")
+
+[node name="MainLight" type="OmniLight3D" parent="." unique_id=292259546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.8857229)
+
+[node name="MainCamera" type="Camera3D" parent="." unique_id=481142759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+near = 0.1
+far = 100.0
