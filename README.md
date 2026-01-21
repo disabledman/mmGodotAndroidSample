@@ -1,5 +1,13 @@
 ## Godot 4.6 Mono Android 正方體旋轉範例
 
+# Snapshots
+
+<img width="645" height="487" alt="image" src="https://github.com/user-attachments/assets/23d5d6f9-5b39-467d-9398-8fd096d39c43" />
+
+<img width="858" height="1907" alt="image" src="https://github.com/user-attachments/assets/4a7713dc-53cc-4908-86ce-a3e622ab2cb9" />
+
+
+
 這個專案提供使用 **Godot 4.6 .NET（Mono）** 開發 Android App 的說明與 C# 腳本範例。
 畫面中會有：
 
